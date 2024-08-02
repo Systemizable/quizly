@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Skranji&display=swap");
+
 body {
     user-select: none;
     overflow-y: hidden;
@@ -17,7 +19,7 @@ body {
     border-radius: 40px;
     box-shadow: 0 0 2em hsl(231deg 62% 94%);
     gap: 2em;  /* Increase gap between elements */
-    width: 400px;
+    width: 100%;
     max-width: 400px;
     box-sizing: border-box;
 }
@@ -29,7 +31,7 @@ body {
     height: auto;
     display: block;
     border-radius: 50%;
-    margin-bottom:100px; /* Center the logo and add some bottom margin */
+    margin-bottom: 100px; /* Center the logo and add some bottom margin */
 }
 
 .email, .password {
@@ -107,4 +109,22 @@ button:hover {
 .footer span {
     cursor: pointer;
     font-weight: bold;
+}
+
+/* Media query for mobile */
+@media (max-width: 600px) {
+    .screen-1 {
+        padding: 2em 1em;
+        gap: 1.5em;
+    }
+
+    .email, .password {
+        padding: 1em;
+        margin-bottom: 1em;
+    }
+
+    .sec-2 input {
+        font-size: 0.9em;
+        padding-left: 1.5em;
+    }
 }

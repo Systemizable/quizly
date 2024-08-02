@@ -20,7 +20,7 @@ body {
     border-radius: 40px;
     box-shadow: 0 0 2em hsl(231deg 62% 94%);
     gap: 2.5em;
-    width: 400px;
+    width: 100%;
     max-width: 400px;
     box-sizing: border-box;
 }
@@ -144,4 +144,32 @@ button:hover {
     font-family: 'Skranji', cursive; /* Apply the font to the button */
     box-sizing: border-box;
     margin-top: 20px; /* Add margin-top to move the button down */
+}
+
+/* Media query for mobile */
+@media (max-width: 600px) {
+    .screen-2 {
+        padding: 2em 1em;
+        gap: 1.5em;
+    }
+
+    .first-name-section, .last-name-section, .email-section, .password-section, .confirm-password-section {
+        padding: 1em;
+        margin-bottom: 1em;
+    }
+
+    .sec-2 input {
+        font-size: 0.9em;
+        padding-left: 1.5em;
+    }
+
+    .popup-inner p {
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+
+    .popup-inner .confirm {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
 }
