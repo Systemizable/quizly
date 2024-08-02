@@ -31,7 +31,6 @@ const SignUp = () => {
                 lastName,
                 email,
                 password,
-                confirmPassword,
             });
             console.log('Response:', response);
             alert(response.data.message);
@@ -125,7 +124,7 @@ const SignUp = () => {
                         )}
                     </div>
                 </div>
-                <button type="submit" className="login" onTouchEnd={handleSignUp}>Sign Up</button>
+                <button type="submit" className="login">Sign Up</button>
             </form>
         </div>
     );
