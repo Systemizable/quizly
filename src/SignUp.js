@@ -17,6 +17,9 @@ const SignUp = () => {
 
     const handleSignUp = async (e) => {
         e.preventDefault();
+        console.log('Sign Up button clicked');
+        console.log(`First Name: ${firstName}, Last Name: ${lastName}, Email: ${email}, Password: ${password}, Confirm Password: ${confirmPassword}`);
+        console.log(`API URL: ${API_URL}`);
 
         if (password !== confirmPassword) {
             setPasswordsMatch(false);
@@ -32,9 +35,11 @@ const SignUp = () => {
                 password,
                 confirmPassword,
             });
+            console.log('Response:', response);
             alert(response.data.message);
         } catch (error) {
             console.error('Error:', error);
+            console.log('Error details:', error.response?.data);
             alert(error.response?.data?.message || 'An error occurred');
         }
     };
