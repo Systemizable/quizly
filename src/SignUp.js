@@ -10,9 +10,10 @@ const SignUp = () => {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
-    const [showConfirmPassword, setShowConfirmPassword] = useState(false); // Separate state for confirm password visibility
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     const [passwordsMatch, setPasswordsMatch] = useState(true);
-    const [showPopup, setShowPopup] = useState(false);
+
+    const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001/api';
 
     const handleSignUp = async (e) => {
         e.preventDefault();
@@ -23,7 +24,7 @@ const SignUp = () => {
         }
 
         try {
-            const response = await axios.post('http://localhost:3001/api/register', {
+            const response = await axios.post(`${API_URL}/register`, {
                 firstName,
                 lastName,
                 email,
@@ -31,7 +32,6 @@ const SignUp = () => {
                 confirmPassword,
             });
             alert(response.data.message);
-            setShowPopup(true); // Show popup on successful sign up
         } catch (error) {
             alert(error.response.data.message);
         }
@@ -123,14 +123,6 @@ const SignUp = () => {
                 </div>
                 <button type="submit" className="login">Sign Up</button>
             </form>
-            {showPopup && (
-                <div className="popup">
-                    <div className="popup-inner">
-                        <p>Do you want to Continue?</p>
-                        <button className="confirm" onClick={() => setShowPopup(false)}>Continue</button>
-                    </div>
-                </div>
-            )}
         </div>
     );
 };
