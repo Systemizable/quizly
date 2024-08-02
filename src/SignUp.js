@@ -19,6 +19,7 @@ const SignUp = () => {
         e.preventDefault();
         console.log('Sign Up button clicked');
         console.log(`First Name: ${firstName}, Last Name: ${lastName}, Email: ${email}, Password: ${password}, Confirm Password: ${confirmPassword}`);
+        console.log(`API URL: ${API_URL}`);
 
         if (password !== confirmPassword) {
             setPasswordsMatch(false);
@@ -32,6 +33,7 @@ const SignUp = () => {
                 lastName,
                 email,
                 password,
+                confirmPassword
             });
             console.log('Response:', response);
             alert(response.data.message);

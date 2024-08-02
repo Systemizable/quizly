@@ -11,7 +11,7 @@ app.use(express.json());
 // Connect to MongoDB Atlas
 const mongoURI = process.env.MONGODB_URI || 'mongodb+srv://josephssfeir:vCwld5yJlTHo5CF6@quizlycluster.ifysxxt.mongodb.net/mydatabase?retryWrites=true&w=majority';
 
-mongoose.connect(mongoURI)
+mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log('Connected to MongoDB');
     })
