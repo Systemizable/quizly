@@ -2,13 +2,13 @@
 
 body {
     user-select: none;
-    overflow-y: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     background: hsl(218deg 50% 91%);
     height: 100vh;
     font-family: 'Leelawadee', sans-serif;
+    margin: 0;
 }
 
 .screen-1 {
@@ -18,7 +18,7 @@ body {
     flex-direction: column;
     border-radius: 40px;
     box-shadow: 0 0 2em hsl(231deg 62% 94%);
-    gap: 2em;  /* Increase gap between elements */
+    gap: 2em;
     width: 100%;
     max-width: 400px;
     box-sizing: border-box;
@@ -27,11 +27,11 @@ body {
 .logo {
     margin-top: -3em;
     align-self: center;
-    width: 150px; /* Adjust size as needed */
+    width: 150px;
     height: auto;
     display: block;
     border-radius: 50%;
-    margin-bottom: 100px; /* Center the logo and add some bottom margin */
+    margin-bottom: 100px;
 }
 
 .email, .password {
@@ -46,7 +46,7 @@ body {
     color: hsl(0deg 0% 30%);
     box-sizing: border-box;
     font-weight: bold;
-    margin-bottom: 1.5em; /* Increase margin-bottom to add more space */
+    margin-bottom: 1.5em;
 }
 
 .sec-2 {

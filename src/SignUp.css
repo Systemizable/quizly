@@ -23,6 +23,7 @@ body {
     width: 100%;
     max-width: 400px;
     box-sizing: border-box;
+    z-index: 10; /* Ensure it's above other elements */
 }
 
 .logo {
@@ -94,6 +95,7 @@ button {
     font-weight: 600;
     cursor: pointer;
     width: 100%;
+    z-index: 10; /* Ensure the button is above other elements */
 }
 
 button:hover {
