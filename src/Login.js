@@ -10,13 +10,18 @@ const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
 
+    const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001/api';
+
     const handleLogin = async (e) => {
         e.preventDefault();
+        console.log('Login button clicked');
         try {
-            const response = await axios.post('http://localhost:3001/api/login', { email, password });
+            const response = await axios.post(`${API_URL}/login`, { email, password });
+            console.log('Response:', response);
             alert(response.data.message);
             // Handle successful login (e.g., navigate to a different page or store user info)
         } catch (error) {
+            console.error('Error:', error);
             alert(error.response.data.message);
         }
     };
@@ -58,7 +63,7 @@ const Login = () => {
                         )}
                     </div>
                 </div>
-                <button type="submit" className="login">Login</button>
+                <button type="submit" className="login" onTouchEnd={handleLogin}>Login</button>
             </form>
             <div className="footer">
                 <span onClick={() => navigate('/signup')}>Sign up</span>

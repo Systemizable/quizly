@@ -17,9 +17,11 @@ const SignUp = () => {
 
     const handleSignUp = async (e) => {
         e.preventDefault();
+        console.log('Sign Up button clicked');
 
         if (password !== confirmPassword) {
             setPasswordsMatch(false);
+            alert('Passwords do not match');
             return;
         }
 
@@ -31,8 +33,10 @@ const SignUp = () => {
                 password,
                 confirmPassword,
             });
+            console.log('Response:', response);
             alert(response.data.message);
         } catch (error) {
+            console.error('Error:', error);
             alert(error.response.data.message);
         }
     };
@@ -121,7 +125,7 @@ const SignUp = () => {
                         )}
                     </div>
                 </div>
-                <button type="submit" className="login">Sign Up</button>
+                <button type="submit" className="login" onTouchEnd={handleSignUp}>Sign Up</button>
             </form>
         </div>
     );
