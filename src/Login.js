@@ -26,11 +26,6 @@ const Login = () => {
         }
     };
 
-    const handleTouchEnd = (e) => {
-        console.log('Touch end event detected');
-        handleLogin(e);
-    };
-
     return (
         <div className="screen-1">
             <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Logo" className="logo" />
@@ -68,7 +63,7 @@ const Login = () => {
                         )}
                     </div>
                 </div>
-                <button type="submit" className="login" onTouchEnd={handleTouchEnd}>Login</button>
+                <button type="submit" className="login">Login</button>
             </form>
             <div className="footer">
                 <span onClick={() => navigate('/signup')}>Sign up</span>
