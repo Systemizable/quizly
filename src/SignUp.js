@@ -33,12 +33,13 @@ const SignUp = () => {
                 lastName,
                 email,
                 password,
-                confirmPassword
+                confirmPassword,
             });
             console.log('Response:', response);
             alert(response.data.message);
         } catch (error) {
             console.error('Error:', error);
+            console.log('Error details:', error.response?.data);
             alert(error.response?.data?.message || 'An error occurred');
         }
     };
