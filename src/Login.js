@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { AiOutlineMail, AiOutlineLock, AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import './Login.css'; // Ensure this is the correct path
+import './Login.css';
 
 const Login = () => {
     const [email, setEmail] = useState('');
