@@ -60,7 +60,7 @@ body {
     border: none;
     width: 100%;
     font-size: 1em;
-    padding-left: 2.5em;
+
 }
 
 .sec-2 input::placeholder {
@@ -120,28 +120,27 @@ button:hover {
     .email, .password {
         padding: 1em;
         margin-bottom: 1em;
-        align-items: flex-start; /* Align items to the start */
+       /* Align items to the start */
     }
 
     .email label, .password label {
-        align-self: flex-start; /* Align label to the start */
+         /* Align label to the start */
     }
 
     .sec-2 input {
         font-size: 0.9em;
-        padding-left: 0.5em; /* Reduce left padding */
-        text-align: left; /* Align input text to the left */
+         /* Align input text to the left */
     }
 
     .sec-2 {
-        gap: 0.5em; /* Reduce gap between elements */
+        /* Reduce gap between elements */
     }
 
     .sec-2 .icon {
-        padding-left: 200px; /* Move icon closer to the input */
+      /* Move icon closer to the input */
     }
 
     .sec-2 .show-hide {
-        right: 0.5em; /* Move show/hide icon closer to the input */
+        /* Move show/hide icon closer to the input */
     }
 }

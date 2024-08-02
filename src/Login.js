@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { AiOutlineMail, AiOutlineLock, AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import './Login.css'; // Assuming your CSS file is named Login.css and in the same folder
+import './Login.css'; // Ensure this is the correct path
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -33,7 +33,7 @@ const Login = () => {
                 <div className="email">
                     <label htmlFor="email">Email Address</label>
                     <div className="sec-2">
-                        <AiOutlineMail />
+                        <AiOutlineMail className="icon" />
                         <input
                             type="email"
                             name="email"
@@ -47,7 +47,7 @@ const Login = () => {
                 <div className="password">
                     <label htmlFor="password">Password</label>
                     <div className="sec-2">
-                        <AiOutlineLock />
+                        <AiOutlineLock className="icon" />
                         <input
                             type={showPassword ? "text" : "password"}
                             name="password"
