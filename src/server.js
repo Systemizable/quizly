@@ -1,12 +1,10 @@
-require('dotenv').config({ path: path.join(__dirname, '.env') });
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const path = require('path');
-
-const userRoutes = require('./routes/api');
-
 const app = express();
+
 const PORT = process.env.PORT || 3001;
 const mongoURI = process.env.MONGODB_URI;
 
@@ -19,18 +17,17 @@ mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .catch((error) => console.error('Error connecting to MongoDB', error));
 
 // API routes
+const userRoutes = require('./routes/api');
 app.use('/api', userRoutes);
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.join(__dirname, '..', 'build')));
 
 // The "catchall" handler: for any request that doesn't match one above, send back React's index.html file.
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public', 'index.html'));
+    res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
 });
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
-
-module.exports = app;
