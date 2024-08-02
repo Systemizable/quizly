@@ -154,7 +154,10 @@ button:hover {
         padding: 2em 1em;
         gap: 1.5em;
     }
-
+    .logo{
+        margin-bottom: 2px;
+        margin-top: 2px;
+    }
     .first-name-section, .last-name-section, .email-section, .password-section, .confirm-password-section {
         padding: 1em;
         margin-bottom: 1em;
@@ -162,7 +165,12 @@ button:hover {
 
     .sec-2 input {
         font-size: 0.9em;
-        padding-left: 1.5em;
+        padding-left: 1.9em;
+    }
+    .sec-2 .icon {
+        position: absolute;
+        left: 0.2em; /* Adjust left position to move the icon further left */
+        color: hsl(0deg 0% 30%);
     }
 
     .popup-inner p {
