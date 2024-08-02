@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Skranji&display=swap");
+
+/* General styles */
+body {
+    user-select: none;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsl(218deg 50% 91%);
+    height: 100vh;
+    font-family: 'Leelawadee', sans-serif;
+}
+
+.screen-2 {
+    background: hsl(213deg 85% 97%);
+    padding: 3em 2em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px;
+    box-shadow: 0 0 2em hsl(231deg 62% 94%);
+    gap: 2.5em;
+    width: 400px;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+.logo {
+    margin-top: -3em;
+    align-self: center;
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    display: block;
+    border-radius: 50%;
+    margin-bottom: -3em; /* Center the logo and add some bottom margin */
+}
+
+.first-name-section, .last-name-section, .email-section, .password-section, .confirm-password-section {
+    background: hsl(0deg 0% 100%);
+    box-shadow: 0 0 2em hsl(231deg 62% 94%);
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border-radius: 20px;
+    color: hsl(0deg 0% 30%);
+    box-sizing: border-box;
+    font-weight: bold;
+    margin-bottom: 1.5em; /* Increase margin-bottom to add more space */
+}
+
+.sec-2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    position: relative;
+    text-align: left;
+}
+
+.sec-2 input {
+    outline: none;
+    border: none;
+    width: 100%;
+    font-size: 1em;
+    padding-left: 2em; /* Adjust padding to move the placeholder closer to the left */
+    text-align: left;
+}
+
+.sec-2 input::placeholder {
+    color: hsl(0deg 0% 0%);
+    font-size: 0.9em;
+    opacity: 0.2;
+}
+
+.sec-2 .icon {
+    position: absolute;
+    left: 1em; /* Adjust left position to move the icon further left */
+    color: hsl(0deg 0% 30%);
+}
+
+.sec-2 .show-hide {
+    position: absolute;
+    right: 1em;
+    cursor: pointer;
+    color: hsl(0deg 0% 30%);
+}
+
+button {
+    padding: 1em;
+    background: #000000;
+    color: hsl(0 0 100);
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background: hsl(233deg 36% 50%);
+}
+
+/* Popup styles */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    font-family: 'Skranji', cursive; /* Apply the font to the popup */
+}
+
+.popup-inner {
+    background: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Skranji', cursive; /* Apply the font to the popup */
+    border: 10px solid black; /* Big black border */
+    box-sizing: border-box;
+}
+
+.popup-inner p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    /* Remove border under the text */
+    padding-bottom: 20px; /* Add padding to separate the text and the border */
+}
+
+.popup-inner .confirm {
+    padding: 10px 20px;
+    background: #28a745; /* Green background for the Continue button */
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Skranji', cursive; /* Apply the font to the button */
+    box-sizing: border-box;
+    margin-top: 20px; /* Add margin-top to move the button down */
+}

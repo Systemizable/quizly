@@ -1,0 +1,110 @@
+body {
+    user-select: none;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsl(218deg 50% 91%);
+    height: 100vh;
+    font-family: 'Leelawadee', sans-serif;
+}
+
+.screen-1 {
+    background: hsl(213deg 85% 97%);
+    padding: 3em 2em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px;
+    box-shadow: 0 0 2em hsl(231deg 62% 94%);
+    gap: 2em;  /* Increase gap between elements */
+    width: 400px;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+.logo {
+    margin-top: -3em;
+    align-self: center;
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    display: block;
+    border-radius: 50%;
+    margin-bottom:100px; /* Center the logo and add some bottom margin */
+}
+
+.email, .password {
+    margin-top: 1em;
+    background: hsl(0deg 0% 100%);
+    box-shadow: 0 0 2em hsl(231deg 62% 94%);
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border-radius: 20px;
+    color: hsl(0deg 0% 30%);
+    box-sizing: border-box;
+    font-weight: bold;
+    margin-bottom: 1.5em; /* Increase margin-bottom to add more space */
+}
+
+.sec-2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    position: relative;
+}
+
+.sec-2 input {
+    outline: none;
+    border: none;
+    width: 100%;
+    font-size: 1em;
+    padding-left: 2.5em;
+}
+
+.sec-2 input::placeholder {
+    color: hsl(0deg 0% 0%);
+    font-size: 0.9em;
+    opacity: 0.5;
+}
+
+.sec-2 .icon {
+    position: absolute;
+    left: 1em;
+    color: hsl(0deg 0% 30%);
+}
+
+.sec-2 .show-hide {
+    position: absolute;
+    right: 1em;
+    cursor: pointer;
+    color: hsl(0deg 0% 30%);
+}
+
+button {
+    padding: 1em;
+    background: #000000;
+    color: hsl(0 0 100);
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background: hsl(233deg 36% 50%);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    color: hsl(0deg 0% 37%);
+    padding-top: 2em;
+}
+
+.footer span {
+    cursor: pointer;
+    font-weight: bold;
+}
