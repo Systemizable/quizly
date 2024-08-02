@@ -63,7 +63,7 @@ const Login = () => {
                         )}
                     </div>
                 </div>
-                <button type="submit" className="login" onTouchEnd={handleLogin}>Login</button>
+                <button type="submit" className="login" onClick={handleLogin} onTouchEnd={handleLogin}>Login</button>
             </form>
             <div className="footer">
                 <span onClick={() => navigate('/signup')}>Sign up</span>
