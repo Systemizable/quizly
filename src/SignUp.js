@@ -18,6 +18,7 @@ const SignUp = () => {
     const handleSignUp = async (e) => {
         e.preventDefault();
         console.log('Sign Up button clicked');
+        console.log(`First Name: ${firstName}, Last Name: ${lastName}, Email: ${email}, Password: ${password}, Confirm Password: ${confirmPassword}`);
 
         if (password !== confirmPassword) {
             setPasswordsMatch(false);
@@ -36,7 +37,7 @@ const SignUp = () => {
             alert(response.data.message);
         } catch (error) {
             console.error('Error:', error);
-            alert(error.response.data.message);
+            alert(error.response?.data?.message || 'An error occurred');
         }
     };
 
@@ -54,6 +55,7 @@ const SignUp = () => {
                             placeholder="First Name"
                             value={firstName}
                             onChange={(e) => setFirstName(e.target.value)}
+                            required
                         />
                     </div>
                 </div>
@@ -67,6 +69,7 @@ const SignUp = () => {
                             placeholder="Last Name"
                             value={lastName}
                             onChange={(e) => setLastName(e.target.value)}
+                            required
                         />
                     </div>
                 </div>
@@ -80,6 +83,7 @@ const SignUp = () => {
                             placeholder="Username@gmail.com"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
+                            required
                         />
                     </div>
                 </div>
@@ -94,6 +98,7 @@ const SignUp = () => {
                             placeholder="············"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
+                            required
                         />
                         {showPassword ? (
                             <AiOutlineEyeInvisible className="show-hide" onClick={() => setShowPassword(false)} />
@@ -116,6 +121,7 @@ const SignUp = () => {
                                 setConfirmPassword(e.target.value);
                                 setPasswordsMatch(e.target.value === password);
                             }}
+                            required
                         />
                         {showConfirmPassword ? (
                             <AiOutlineEyeInvisible className="show-hide" onClick={() => setShowConfirmPassword(false)} />
