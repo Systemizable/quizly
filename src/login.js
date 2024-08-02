@@ -10,15 +10,13 @@ const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
 
-    const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001/api';
+    const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3000/api';
 
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
             const response = await axios.post(`${API_URL}/login`, { email, password });
             alert(response.data.message);
-            // Navigate to another page on successful login
-            navigate('/dashboard'); // Assuming you have a /dashboard route
         } catch (error) {
             console.error('Error:', error);
             alert(error.response.data.message);
