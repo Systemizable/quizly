@@ -3,11 +3,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const path = require('path');
-const app = express();
 
+const userRoutes = require('./routes/api');
+
+const app = express();
 const PORT = process.env.PORT || 3001;
 const mongoURI = process.env.MONGODB_URI;
 
+// Middleware
 app.use(cors());
 app.use(express.json());
 
@@ -17,7 +20,6 @@ mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .catch((error) => console.error('Error connecting to MongoDB', error));
 
 // API routes
-const userRoutes = require('./routes/api');
 app.use('/api', userRoutes);
 
 // Serve static files from the React app
@@ -31,3 +33,5 @@ app.get('*', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+
+module.exports = app;
