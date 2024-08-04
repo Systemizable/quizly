@@ -41,7 +41,7 @@ router.post('/register', async (req, res) => {
     }
 });
 
-// Login user
+// LoginComponent user
 router.post('/login', async (req, res) => {
     const { email, password } = req.body;
 
@@ -60,8 +60,8 @@ router.post('/login', async (req, res) => {
             return res.status(400).json({ message: 'Invalid credentials' });
         }
 
-        console.log('Login successful');
-        res.status(200).json({ message: 'Login successful' });
+        console.log('LoginComponent successful');
+        res.status(200).json({ message: 'LoginComponent successful' });
     } catch (err) {
         console.error('Server error:', err);
         res.status(500).json({ message: 'Server error' });

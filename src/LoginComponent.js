@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Login.css';
 
-const Login = () => {
+const LoginComponent = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
@@ -14,7 +14,7 @@ const Login = () => {
 
     const handleLogin = async (e) => {
         e.preventDefault();
-        console.log('Login button clicked');
+        console.log('LoginComponent button clicked');
         try {
             const response = await axios.post(`${API_URL}/Login`, { email, password });
             console.log('Response:', response);
@@ -73,4 +73,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default LoginComponent;
