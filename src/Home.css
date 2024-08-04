@@ -1,0 +1,26 @@
+.home-container {
+    text-align: center;
+    padding: 50px;
+}
+
+.home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.sign-in-link {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1.2em;
+}
+
+.sign-in-link:hover {
+    text-decoration: underline;
+}
+
+main {
+    margin-top: 20px;
+}
