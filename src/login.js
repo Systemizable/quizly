@@ -16,7 +16,7 @@ const Login = () => {
         e.preventDefault();
         console.log('Login button clicked');
         try {
-            const response = await axios.post(`${API_URL}/login`, { email, password });
+            const response = await axios.post(`${API_URL}/Login`, { email, password });
             console.log('Response:', response);
             alert(response.data.message);
             // Handle successful login (e.g., navigate to a different page or store user info)
