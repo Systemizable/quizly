@@ -145,7 +145,7 @@ const SignUp = () => {
                 <div className="social-login">
                     <span>Sign in with:</span>
                     <div className="social-icons">
-                        <SocialIcon url="https://google.com" />
+                        <SocialIcon url="https://gmail.com" />
                         <SocialIcon url="https://facebook.com" />
                         <SocialIcon url="https://instagram.com" />
                         <SocialIcon url="https://x.com" />
