@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { AiOutlineMail, AiOutlineLock, AiOutlineEye, AiOutlineEyeInvisible, AiOutlineUser } from 'react-icons/ai';
 import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
+import { SocialIcon } from 'react-social-icons';
 import './SignUp.css';
 
 const SignUp = () => {
@@ -141,6 +142,16 @@ const SignUp = () => {
                     </div>
                     <button type="submit" className="login">Sign Up</button>
                 </form>
+                <div className="social-login">
+                    <span>Sign in with:</span>
+                    <div className="social-icons">
+                        <SocialIcon url="https://google.com" />
+                        <SocialIcon url="https://facebook.com" />
+                        <SocialIcon url="https://instagram.com" />
+                        <SocialIcon url="https://x.com" />
+                        <SocialIcon url="https://tiktok.com" />
+                    </div>
+                </div>
             </div>
         </div>
     );
