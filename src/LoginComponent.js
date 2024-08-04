@@ -16,7 +16,7 @@ const LoginComponent = () => {
         e.preventDefault();
         console.log('LoginComponent button clicked');
         try {
-            const response = await axios.post(`${API_URL}/Login`, { email, password });
+            const response = await axios.post(`${API_URL}/login`, { email, password });
             console.log('Response:', response);
             alert(response.data.message);
             // Handle successful login (e.g., navigate to a different page or store user info)
@@ -27,47 +27,49 @@ const LoginComponent = () => {
     };
 
     return (
-        <div className="screen-1">
-            <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Logo" className="logo" />
-            <form onSubmit={handleLogin}>
-                <div className="email">
-                    <label htmlFor="email">Email Address</label>
-                    <div className="sec-2">
-                        <AiOutlineMail className="icon" />
-                        <input
-                            type="email"
-                            name="email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            placeholder="Username@gmail.com"
-                            required
-                        />
+        <div className="login-container">
+            <div className="screen-1">
+                <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Logo" className="logo" />
+                <form onSubmit={handleLogin}>
+                    <div className="email">
+                        <label htmlFor="email">Email Address</label>
+                        <div className="sec-2">
+                            <AiOutlineMail className="icon" />
+                            <input
+                                type="email"
+                                name="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                placeholder="Username@gmail.com"
+                                required
+                            />
+                        </div>
                     </div>
-                </div>
-                <div className="password">
-                    <label htmlFor="password">Password</label>
-                    <div className="sec-2">
-                        <AiOutlineLock className="icon" />
-                        <input
-                            type={showPassword ? "text" : "password"}
-                            name="password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            placeholder="············"
-                            required
-                        />
-                        {showPassword ? (
-                            <AiOutlineEyeInvisible className="show-hide" onClick={() => setShowPassword(!showPassword)} />
-                        ) : (
-                            <AiOutlineEye className="show-hide" onClick={() => setShowPassword(!showPassword)} />
-                        )}
+                    <div className="password">
+                        <label htmlFor="password">Password</label>
+                        <div className="sec-2">
+                            <AiOutlineLock className="icon" />
+                            <input
+                                type={showPassword ? "text" : "password"}
+                                name="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                placeholder="············"
+                                required
+                            />
+                            {showPassword ? (
+                                <AiOutlineEyeInvisible className="show-hide" onClick={() => setShowPassword(!showPassword)} />
+                            ) : (
+                                <AiOutlineEye className="show-hide" onClick={() => setShowPassword(!showPassword)} />
+                            )}
+                        </div>
                     </div>
+                    <button type="submit" className="login">Login</button>
+                </form>
+                <div className="footer">
+                    <span onClick={() => navigate('/signup', { state: { fullscreen: true } })}>Sign up</span>
+                    <span>Forgot Password?</span>
                 </div>
-                <button type="submit" className="login">Login</button>
-            </form>
-            <div className="footer">
-                <span onClick={() => navigate('/signup')}>Sign up</span>
-                <span>Forgot Password?</span>
             </div>
         </div>
     );

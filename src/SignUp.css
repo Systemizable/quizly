@@ -3,13 +3,22 @@
 /* General styles */
 body {
     user-select: none;
-    overflow-y: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     background: hsl(218deg 50% 91%);
     height: 100vh;
     font-family: 'Leelawadee', sans-serif;
+    margin: 0;
+}
+
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: hsl(218deg 50% 91%);
 }
 
 .screen-2 {
@@ -23,20 +32,20 @@ body {
     width: 100%;
     max-width: 400px;
     box-sizing: border-box;
-    z-index: 10; /* Ensure it's above other elements */
 }
 
 .logo {
     margin-top: -3em;
     align-self: center;
-    width: 150px; /* Adjust size as needed */
+    width: 150px;
     height: auto;
     display: block;
     border-radius: 50%;
-    margin-bottom: -3em; /* Center the logo and add some bottom margin */
+    margin-bottom: 100px;
 }
 
 .first-name-section, .last-name-section, .email-section, .password-section, .confirm-password-section {
+    margin-top: 1em;
     background: hsl(0deg 0% 100%);
     box-shadow: 0 0 2em hsl(231deg 62% 94%);
     padding: 1.5em;
@@ -47,7 +56,7 @@ body {
     color: hsl(0deg 0% 30%);
     box-sizing: border-box;
     font-weight: bold;
-    margin-bottom: 1.5em; /* Increase margin-bottom to add more space */
+    margin-bottom: 1.5em;
 }
 
 .sec-2 {
@@ -55,7 +64,6 @@ body {
     align-items: center;
     gap: 0.5em;
     position: relative;
-    text-align: left;
 }
 
 .sec-2 input {
@@ -63,19 +71,18 @@ body {
     border: none;
     width: 100%;
     font-size: 1em;
-    padding-left: 2em; /* Adjust padding to move the placeholder closer to the left */
-    text-align: left;
+    padding-left: 2em; /* Add padding to the left to make space for the icon */
 }
 
 .sec-2 input::placeholder {
     color: hsl(0deg 0% 0%);
     font-size: 0.9em;
-    opacity: 0.2;
+    opacity: 0.5;
 }
 
 .sec-2 .icon {
     position: absolute;
-    left: 1em; /* Adjust left position to move the icon further left */
+    left: 0.5em; /* Adjust the position of the icon to be inside the input */
     color: hsl(0deg 0% 30%);
 }
 
@@ -95,57 +102,10 @@ button {
     font-weight: 600;
     cursor: pointer;
     width: 100%;
-    z-index: 10; /* Ensure the button is above other elements */
 }
 
 button:hover {
     background: hsl(233deg 36% 50%);
-}
-
-/* Popup styles */
-.popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    font-family: 'Skranji', cursive; /* Apply the font to the popup */
-}
-
-.popup-inner {
-    background: #fff;
-    padding: 2em;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-family: 'Skranji', cursive; /* Apply the font to the popup */
-    border: 10px solid black; /* Big black border */
-    box-sizing: border-box;
-}
-
-.popup-inner p {
-    font-size: 24px;
-    margin-bottom: 20px;
-    /* Remove border under the text */
-    padding-bottom: 20px; /* Add padding to separate the text and the border */
-}
-
-.popup-inner .confirm {
-    padding: 10px 20px;
-    background: #28a745; /* Green background for the Continue button */
-    color: #ffffff;
-    border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    font-family: 'Skranji', cursive; /* Apply the font to the button */
-    box-sizing: border-box;
-    margin-top: 20px; /* Add margin-top to move the button down */
 }
 
 /* Media query for mobile */
@@ -154,10 +114,7 @@ button:hover {
         padding: 2em 1em;
         gap: 1.5em;
     }
-    .logo{
-        margin-bottom: 2px;
-        margin-top: 2px;
-    }
+
     .first-name-section, .last-name-section, .email-section, .password-section, .confirm-password-section {
         padding: 1em;
         margin-bottom: 1em;
@@ -165,21 +122,9 @@ button:hover {
 
     .sec-2 input {
         font-size: 0.9em;
-        padding-left: 1.9em;
     }
+
     .sec-2 .icon {
-        position: absolute;
-        left: 0.2em; /* Adjust left position to move the icon further left */
-        color: hsl(0deg 0% 30%);
-    }
-
-    .popup-inner p {
-        font-size: 20px;
-        padding-bottom: 10px;
-    }
-
-    .popup-inner .confirm {
-        font-size: 14px;
-        padding: 8px 16px;
+        left: 0.2em;
     }
 }

@@ -1,19 +1,46 @@
+.top-left-logo {
+    width: 50px;
+    height: auto;
+    filter: invert(100%) brightness(2) saturate(0%) contrast(100%);
+}
+
+/* You can adjust the filter values to achieve the desired color. */
+/* For example, to make the logo red: */
+/*
+.top-left-logo {
+  filter: invert(12%) sepia(88%) saturate(7498%) hue-rotate(358deg) brightness(100%) contrast(117%);
+}
+*/
+
 body {
     margin: 0 auto;
     overflow: hidden;
 }
 
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#header-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    position: fixed;
+    z-index: 1;
+}
+
+#top-left-element {
+    margin-left: 20px;
+}
+
 #navBar {
     display: flex;
-    position: fixed;
-
-    height: auto;
-    width: 100%;
-    align-items: center;
     justify-content: center;
-    z-index: 1;
-    padding: 10px 0 10px 0;
-
+    align-items: center;
+    flex-grow: 1;
 }
 
 #navUl {
@@ -149,18 +176,6 @@ body {
     to {left: 60%; top: 100%;}
 }
 
-#star8 {
-    top: 0%;
-    left: 10%;
-    animation: star8 linear 5.5s forwards infinite;
-    animation-delay: 2.5s;
-}
-
-@keyframes star8 {
-    from {left: 10%; top: 0%;}
-    to {left: 60%; top: 100%;}
-}
-
 #star9 {
     top: 60%;
     left: 100%;
@@ -200,7 +215,9 @@ body {
 #welcome {
     font-family: 'Londrina Outline', cursive;
     color: white;
-    -webkit-text-fill-color: white; /* This ensures the text is filled white */
+    -webkit-text-fill-color: white; /* Ensures the text is filled white */
+    -moz-text-fill-color: white; /* For Firefox */
+    text-fill-color: white; /* Standard property */
     font-size: 200px;
     align-self: center;
     width: 100%;
@@ -211,7 +228,6 @@ body {
     animation: go 2s forwards;
     animation-delay: 2s;
 }
-
 
 @keyframes go {
     10% {
