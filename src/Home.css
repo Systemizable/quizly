@@ -1,96 +1,251 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:900&display=swap');
-
-h1 {
-    color: #FFFFFF;
-    font-family: 'Poppins', sans-serif;
-    font-size: 80px;
-    font-weight: 900;
-    text-transform: uppercase;
-    white-space: nowrap;
-    opacity: 0;
-}
-
-::selection {
-    background: black;
-}
-
-.page {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 0;
-    min-height: 100vh;
-    background-color: black;
-    background-image: url("https://images.unsplash.com/photo-1544077960-604201fe74bc?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=1080&fit=crop&ixid=eyJhcHBfaWQiOjF9");
-    background-position: center;
-    background-size: cover;
+body {
+    margin: 0 auto;
     overflow: hidden;
 }
 
-.vignette {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
-    pointer-events: none;
-    opacity: 1;
-    transition: opacity 350ms;
+#navBar {
+    display: flex;
+    position: fixed;
+
+    height: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    padding: 10px 0 10px 0;
+
 }
 
-@media screen and (max-width: 900px) {
-    .vignette {
-        opacity: .8;
+#navUl {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+}
+
+#navLi a {
+    color: white;
+    justify-self: center;
+    align-self: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* THE STARS */
+#scene {
+    width: 100vw;
+    margin: 0 auto;
+    height: 100vh;
+    background-image: url("https://res.cloudinary.com/dylant25/image/upload/v1563056818/stars.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    position: relative;
+}
+
+#scene > div {
+    height: 1px;
+    width: 1px;
+    border: 1px solid white;
+    border-radius: 100%;
+    position: absolute;
+}
+
+#star1 {
+    top: 50%;
+    left: 0%;
+    animation: star1 linear 5s forwards infinite;
+    animation-delay: 2s;
+}
+
+@keyframes star1 {
+    from {left: 0%;}
+    to {left: 99%;}
+}
+
+#star2 {
+    top: 0%;
+    left: 0%;
+    animation: star2 linear 3s forwards infinite;
+    animation-delay: 1s;
+}
+
+@keyframes star2 {
+    from {left: 0%; top: 0%;}
+    to {left: 99%; top: 100%;}
+}
+
+#star3 {
+    top: 0%;
+    left: 50%;
+    animation: star3 linear 2s forwards infinite;
+    animation-delay: 4s;
+}
+
+@keyframes star3 {
+    from {left: 50%; top: 0%;}
+    to {left: 80%; top: 100%;}
+}
+
+#star4 {
+    top: 100%;
+    left: 100%;
+    animation: star4 linear 3s forwards infinite;
+    animation-delay: 5s;
+}
+
+@keyframes star4 {
+    from {left: 100%; top: 100%;}
+    to {left: 50%; top: 0%;}
+}
+
+#star5 {
+    top: 100%;
+    left: 30%;
+    animation: star5 linear 5s forwards infinite;
+    animation-delay: 5.5s;
+}
+
+@keyframes star5 {
+    from {left: 30%; top: 100%;}
+    to {left: 50%; top: 0%;}
+}
+
+#star6 {
+    top: 100%;
+    left: 0%;
+    animation: star6 linear 5s forwards infinite;
+    animation-delay: 4.5s;
+}
+
+@keyframes star6 {
+    from {left: 0%; top: 100%;}
+    to {left: 85%; top: 0%;}
+}
+
+#star7 {
+    top: 70%;
+    left: 0%;
+    animation: star7 linear 4s forwards infinite;
+    animation-delay: 3.5s;
+}
+
+@keyframes star7 {
+    from {left: 0%; top: 70%;}
+    to {left: 85%; top: 0%;}
+}
+
+#star8 {
+    top: 0%;
+    left: 10%;
+    animation: star8 linear 5.5s forwards infinite;
+    animation-delay: 2.5s;
+}
+
+@keyframes star8 {
+    from {left: 10%; top: 0%;}
+    to {left: 60%; top: 100%;}
+}
+
+#star8 {
+    top: 0%;
+    left: 10%;
+    animation: star8 linear 5.5s forwards infinite;
+    animation-delay: 2.5s;
+}
+
+@keyframes star8 {
+    from {left: 10%; top: 0%;}
+    to {left: 60%; top: 100%;}
+}
+
+#star9 {
+    top: 60%;
+    left: 100%;
+    animation: star9 linear 4.5s forwards infinite;
+    animation-delay: 3s;
+}
+
+@keyframes star9 {
+    from {left: 100%; top: 55%;}
+    to {left: 55%; top: 100%;}
+}
+
+#star10 {
+    top: 100%;
+    left: 50%;
+    animation: star10 linear 5s forwards infinite;
+    animation-delay: 4s;
+}
+
+@keyframes star10 {
+    from {left: 50%; top: 100%;}
+    to {left: 15%; top: 0%;}
+}
+
+#star11 {
+    top: 30%;
+    left: 0%;
+    animation: star11 linear 2s forwards infinite;
+    animation-delay: 4s;
+}
+
+@keyframes star11 {
+    from {left: 0%; top: 70%;}
+    to {left: 25%; top: 0%;}
+}
+
+#welcome {
+    font-family: 'Londrina Outline', cursive;
+    color: white;
+    -webkit-text-fill-color: white; /* This ensures the text is filled white */
+    font-size: 200px;
+    align-self: center;
+    width: 100%;
+    text-align: center;
+    justify-self: center;
+    margin: 0 auto;
+    position: absolute;
+    animation: go 2s forwards;
+    animation-delay: 2s;
+}
+
+
+@keyframes go {
+    10% {
+        font-size: 200px;
+    }
+    20% {
+        font-size: 1px;
     }
 }
 
-.lines {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    min-width: 960px;
-    border-right: 1px solid black;
-    border-left: 1px solid black;
-    pointer-events: none;
-}
+@media (max-width: 400px) {
+    body {
+        over-flow: hidden;
+    }
 
-.lines__inner,
-.lines::before {
-    position: absolute;
-    top: 0;
-    left: 33%;
-    bottom: 0;
-    width: 33%;
-}
+    #welcome {
+        font-size: 50px;
+    }
 
-.lines::before {
-    content: '';
-    border-right: 1px solid black;
-    border-left: 1px solid black;
-}
+    @keyframes go {
+        10% {
+            font-size: 50px;
+        }
+        20% {
+            font-size: 1px;
+        }
+    }
 
-.lines__inner {
-    box-shadow: 0 0 15px 5px black;
-    opacity: 0;
-}
+    #navUl {
+        justify-content: center;
+        margin: 0 auto;
+    }
 
-.restart {
-    position: fixed;
-    left: 50%;
-    bottom: 20px;
-    transform: translate(-50%, 0);
-    width: 30px;
-    height: 30px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'%3E%3Cpath fill='%23FFF' d='M133,440a35.37,35.37,0,0,1-17.5-4.67c-12-6.8-19.46-20-19.46-34.33V111c0-14.37,7.46-27.53,19.46-34.33a35.13,35.13,0,0,1,35.77.45L399.12,225.48a36,36,0,0,1,0,61L151.23,434.88A35.5,35.5,0,0,1,133,440Z'/%3E%3C/svg%3E") center/cover;
-    border: none;
-    outline: none;
-    opacity: .15;
-    cursor: pointer;
-    transition: opacity 300ms;
-}
-
-.restart:hover {
-    opacity: 1;
+    #navLi a {
+        font-size: 15px;
+    }
 }
